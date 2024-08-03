@@ -21,3 +21,5 @@ def evaluate_model(model, X_test, y_test):
     return metrics
 
 # okay time to train the system to rank candidates (i hope someone helps me here over time)
+# i want to retrain the model, i made a mistake:
+
