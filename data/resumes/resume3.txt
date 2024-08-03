@@ -1,0 +1,4 @@
+Alice Johnson
+Data Scientist with 4 years of experience in data analysis and statistical modeling.
+Proficient in Python, R, and SQL for building predictive models.
+Skills: Python, R, SQL, Data Analysis, Machine Learning
