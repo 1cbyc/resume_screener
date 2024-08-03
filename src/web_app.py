@@ -1,10 +1,14 @@
 from flask import Flask, request, jsonify
 import joblib
+import logging
 from data_preprocessing import preprocess_text
 from feature_engineering import extract_skills, skills_match
 
 app = Flask(__name__)
-model = joblib.load('model.pkl')
+# model = joblib.load('model.pkl')
+
+logging.basicConfig(filename='app.log', level=logging.ERROR,
+                    )
 
 
 @app.route('/rank', methods=['POST'])
