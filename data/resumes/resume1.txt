@@ -1,0 +1,4 @@
+John Doe
+Software Engineer with 5 years of experience in Python and Java.
+Expertise in machine learning, data analysis, and web development.
+Skills: Python, Java, Machine Learning, SQL, HTML, CSS

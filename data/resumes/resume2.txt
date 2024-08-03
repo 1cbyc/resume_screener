@@ -1,0 +1,4 @@
+Jane Smith
+Front-end Developer with 3 years of experience in JavaScript and React.
+Strong background in creating responsive web designs and improving UI/UX.
+Skills: JavaScript, React, HTML, CSS, UX Design
