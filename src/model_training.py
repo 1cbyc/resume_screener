@@ -7,15 +7,18 @@ from feature_engineering import create_features
 from data_preprocessing import preprocess_data, load_data
 
 def retrain_and_save_model():
+
+    # 
     data = load_data('data/resumes_and_jobs.csv')
     processed_data = preprocess_data(data)
     X, y = create_features(processed_data)
+    # creating and training the model
     model = LogisticRegression()
     model.fit(X, y)
     joblib.dump(model, 'model.pkl')
     print("Model trained and saved successfully.")
     # return model, X, y
-    return model
+    # return model
 
 if __name__ == '__main__':
     retrain_and_save_model()
