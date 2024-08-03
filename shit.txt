@@ -1,0 +1,35 @@
+import joblib
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+
+def load_text_data():
+    # Example function to load and preprocess text data
+    # Replace these paths with your actual data paths
+    with open('data/resumes/sample_resume1.txt', 'r') as file:
+        resume1 = file.read()
+    with open('data/job_descriptions/sample_job_description1.txt', 'r') as file:
+        job_description = file.read()
+    
+    return [resume1], [job_description]
+
+def retrain_and_save_model():
+    # Load your actual data
+    resumes, job_descriptions = load_text_data()
+
+    # Convert text data to features
+    vectorizer = TfidfVectorizer()
+    X = vectorizer.fit_transform(resumes + job_descriptions)
+    
+    # Example target variable (you need real labels here)
+    y = [1]  # Example label for resumes
+    
+    # Create and train the model
+    model = LogisticRegression()
+    model.fit(X, y)
+
+    # Save the model
+    joblib.dump(model, 'model.pkl')
+    print("Model trained and saved successfully.")
+
+if __name__ == "__main__":
+    retrain_and_save_model()
