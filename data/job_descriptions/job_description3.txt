@@ -1,0 +1,6 @@
+Job Title: Software Engineer
+Requirements:
+- Experience with Java and Python.
+- Strong background in web development and software design.
+- Familiarity with agile development methodologies.
+Skills: Java, Python, Web Development, Agile
