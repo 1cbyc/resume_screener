@@ -39,9 +39,11 @@ def rank():
         processed_resumes = [preprocess_text(resume) for resume in resumes]
         processed_job_description = preprocess_text(job_description)
 
+        # next the code should extract the skills and use it to create features
         job_skills = extract_skills(processed_job_description)
         features = [[skills_match(extract_skills(resume), job_skills)] for resume in processed_resumes]
 
+        # at this point it is due to predice the model
         predictions = model.predict(features)
         return jsonify({'rankings': predictions.tolist()})
 
