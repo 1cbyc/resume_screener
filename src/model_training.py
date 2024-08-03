@@ -8,6 +8,7 @@ from data_preprocessing import preprocess_data, load_data
 
 def retrain_and_save_model():
     data = load_data('data/resumes_and_jobs.csv')
+    processed_data = preprocess_data(data)
 
 def train_model(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
