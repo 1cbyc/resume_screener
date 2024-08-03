@@ -56,4 +56,10 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 # okay the flask i installed earlier time to put it to work in real time
-# created the flask web app to serve it, should work now
+# # created the flask web app to serve it, should work now
+# # everything i did by 4:45am on 3/08/2024
+# Data Preprocessing: Loads and cleans the data.
+# Feature Engineering: Extracts and processes features.
+# Model Training: Trains and saves the model.
+# Model Evaluation: Evaluates model performance.
+# Web Application: Handles incoming requests, integrates with the model, and provides error handling.
