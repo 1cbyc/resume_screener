@@ -6,7 +6,8 @@ import pandas as pd
 from feature_engineering import create_features
 from data_preprocessing import preprocess_data, load_data
 
-def retrain_and_save_model()
+def retrain_and_save_model():
+    data = load_data('data/resumes_and_jobs.csv')
 
 def train_model(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
