@@ -21,7 +21,7 @@ except (EOFError, FileNotFoundError) as e:
 @app.route('/rank', methods=['POST'])
 def rank():
     if model is None:
-        
+
     resumes = request.json['resumes']
     job_description = request.json['job_description']
 
