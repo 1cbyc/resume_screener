@@ -1,0 +1,6 @@
+Job Title: Front-end Developer
+Requirements:
+- Proficiency in JavaScript, React, and HTML/CSS.
+- Experience in creating responsive web applications.
+- Strong understanding of UX/UI principles.
+Skills: JavaScript, React, HTML, CSS, UX Design

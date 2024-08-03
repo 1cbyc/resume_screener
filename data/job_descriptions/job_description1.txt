@@ -1,0 +1,6 @@
+Job Title: Data Scientist
+Requirements:
+- Strong experience in Python and SQL.
+- Knowledge of machine learning algorithms and statistical modeling.
+- Experience with data visualization tools.
+Skills: Python, SQL, Machine Learning, Data Visualization
