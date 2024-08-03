@@ -13,7 +13,7 @@ logging.basicConfig(filename='app.log', level=logging.ERROR,
 
 # should be able to load model with error handling now atleast
 try:
-    model = joblib.load('model.pkl')
+    model = joblib.load('../model.pkl')
 except (EOFError, FileNotFoundError) as e:
     app.logger.error(f"Error loading model: {e}")
     model = None
