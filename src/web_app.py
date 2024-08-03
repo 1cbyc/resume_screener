@@ -45,8 +45,12 @@ def rank():
 
         # at this point it is due to predice the model
         predictions = model.predict(features)
+
         return jsonify({'rankings': predictions.tolist()})
 
+    except Exception as e:
+        app.logger.error(f"Error processing request: {e}")
+        return jsonify({'error': 'An error occurred while processing the request'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
