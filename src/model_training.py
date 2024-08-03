@@ -13,6 +13,7 @@ def retrain_and_save_model():
     model = LogisticRegression()
     model.fit(X, y)
     joblib.dump(model, 'model.pkl')
+    print("Model trained and saved successfully.")
     # return model, X, y
     return model
 
