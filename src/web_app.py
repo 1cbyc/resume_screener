@@ -21,10 +21,21 @@ except (EOFError, FileNotFoundError) as e:
 @app.route('/rank', methods=['POST'])
 def rank():
     if model is None:
+        return jsonify({'error': 'This Model no load well'}), 500
 
-    resumes = request.json['resumes']
-    job_description = request.json['job_description']
+    try:
+        # let me just extract data from request first (will come back later)
+        data = request.json
+        if 'resumes' not in data or 'job_description' not in data:
+            return jsonify({'error': 'Invalid Input data'}), 400
 
+        resumes = data['resumes']
+        job_description = data['job_description']
+
+    # resumes = request.json['resumes']
+    # job_description = request.json['job_description']
+
+    # time to preprocess resume and job desc
     processed_resumes = [preprocess_text(resume) for resume in resumes]
     processed_job_description = preprocess_text(job_description)
 
