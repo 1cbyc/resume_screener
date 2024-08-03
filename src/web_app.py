@@ -7,12 +7,21 @@ from feature_engineering import extract_skills, skills_match
 app = Flask(__name__)
 # model = joblib.load('model.pkl')
 
+# let me configure logging this time
 logging.basicConfig(filename='app.log', level=logging.ERROR,
-                    )
+                    format='%(asctime)s %(levelname)s %(message)s')
 
+# should be able to load model with error handling now atleast
+try:
+    model = joblib.load('model.pkl')
+except (EOFError, FileNotFoundError) as e:
+    app.logger.error(f"Error loading model: {e}")
+    model = None
 
 @app.route('/rank', methods=['POST'])
 def rank():
+    if model is None:
+        
     resumes = request.json['resumes']
     job_description = request.json['job_description']
 
