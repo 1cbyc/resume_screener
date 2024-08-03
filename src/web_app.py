@@ -18,7 +18,7 @@ except (EOFError, FileNotFoundError) as e:
     app.logger.error(f"Error loading model: {e}")
     model = None
 except EOFError:
-    app.logger.error("Model file is corrupted or incomplete. Please retrain and save the model again.")
+    app.logger.error("Model file is corrupted or incomplete. Egbon retrain and save the model again.")
     model = None
 except Exception as e:
     app.logger.error(f"Unexpected error loading model: {e}")
